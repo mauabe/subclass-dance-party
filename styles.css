@@ -1,0 +1,110 @@
+body, html{
+  height:100%;
+  background-image: url("pics/ballroom.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+body{
+  margin: 0px;
+  background-color:#444;
+  font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+  color: lightblue;
+}
+.title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.topbar{
+  height:32px;
+  background-color: #555;
+}
+.title{
+  background-color: #777;
+}
+
+.discoball {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%
+}
+
+.dancer{
+  border: 10px solid white;
+  border-radius: 50%;
+  position: absolute;
+  animation: myBlinky 1s infinite;
+}
+
+@keyframes myBlinky{
+  0% {opacity: 0.2}
+  50% {opacity: 0.8}
+  100% {opacity: 0.2}
+}
+
+
+
+.circleDancer{
+  border: none;
+  border-radius:50%;
+  position:absolute;
+  content: url("pics/circle.gif");
+  height: 80px;
+  width: 200px;
+  animation: myCircle 4s infinite ;
+  animation-timing-function: ease-in;
+}
+
+@keyframes myCircle {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+.dogDancer {
+  border: none;
+  border-radius:50%;
+  position:absolute;
+  content: url("pics/dog.gif");
+  height: 120px;
+  width: 150px;
+  animation: flip 10s infinite;
+}
+
+@keyframes flip {
+  0% {height: 10px; width: 10px;}
+  25% { height: 130px; width: 150px;}
+  50% {transform: rotateY(.5turn); opacity: 1.0}
+  100% {transform: rotateY(1turn);}
+}
+
+.kickDancer {
+  border: none;
+  border-radius:50%;
+  position:absolute;
+  content: url("pics/tina.gif");
+  height: 120px;
+  width:80px;
+  animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  0% {top: 0px;}
+  50% {top: 700px;}
+  100% {top: 0px;}
+}
+
+.dancer:hover {
+  opacity: 0.5;
+  transform: scale(3.5, 3.25);
+}
+
+.replace {
+  
+}
+
+
+
+
